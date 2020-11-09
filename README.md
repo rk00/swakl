@@ -1,2 +1,2 @@
-# swakl
+# swAKL
 SWGoH AKL
