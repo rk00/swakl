@@ -1,6 +1,13 @@
 localPath = scriptPath()
 imagePath = (localPath .. "image/")
-print(httpGet("https://raw.githubusercontent.com/rk00/swakl/main/version.txt"))
+newestVersion = loadstring(httpGet("https://raw.githubusercontent.com/rk00/swakl/main/version.txt"))
+currentVersion = dofile(localPath .. "version.txt")
+if currentVersion == newestVersion then
+  toast("Runninf latest version")
+else
+  httpDownload("https://raw.githubusercontent.com/rk00/swakl/main/update.lua")
+end
+
 while true do
   wait(5)
 end
