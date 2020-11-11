@@ -6,6 +6,7 @@ if currentVersion == newestVersion then
   toast("Running latest version")
 else
   httpDownload("https://raw.githubusercontent.com/rk00/swakl/main/update.lua")
+  scriptExit("You have updated script!")
 end
 
 while true do
