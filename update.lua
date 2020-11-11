@@ -7,8 +7,8 @@ print(currentVersion)
 if currentVersion == newestVersion then
   toast("Running latest version")
 else
-  httpDownload("https://raw.githubusercontent.com/rk00/swakl/main/version.lua")
-  httpDownload("https://raw.githubusercontent.com/rk00/swakl/main/update.lua")
+  httpDownload("https://raw.githubusercontent.com/rk00/swakl/main/version.lua", localPath .."version.lua")
+  httpDownload("https://raw.githubusercontent.com/rk00/swakl/main/update.lua", localPath .."update.lua")
   scriptExit("You have updated script!")
 end
 
