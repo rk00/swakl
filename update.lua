@@ -2,6 +2,8 @@ localPath = scriptPath()
 imagePath = (localPath .. "image/")
 newestVersion = loadstring(httpGet("https://raw.githubusercontent.com/rk00/swakl/main/version.txt"))
 currentVersion = dofile(localPath .. "version.txt")
+print(newestVersion)
+print(currentVersion)
 if currentVersion == newestVersion then
   toast("Running latest version")
 else
