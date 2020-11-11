@@ -1,6 +1,6 @@
 localPath = scriptPath()
 imagePath = (localPath .. "image/")
-newestVersion = loadstring(httpGet("https://raw.githubusercontent.com/rk00/swakl/main/version.txt"))()
+newestVersion = loadstring(httpGet("https://raw.githubusercontent.com/rk00/swakl/main/version.lua"))()
 currentVersion = dofile(localPath .. "version.lua")
 print(newestVersion)
 print(currentVersion)
